@@ -20,7 +20,7 @@
 | 06 | EC2 Auto Scaling | EC2, Launch Templates, ASG, CloudWatch | [→](./projects/6/README.md) |
 | 07 | Event-driven messaging | SNS, SQS, DLQ, Lambda | [→](./projects/7/README.md) |
 | 08 | NoSQL database | DynamoDB, GSI, TTL, Streams | [→](./projects/8/README.md) |
-| 09 | Generative AI chatbot | Bedrock, Lambda, S3, CloudFront | [→]() |
+| 09 | Generative AI chatbot | Bedrock, Lambda, S3, CloudFront | [→](./projects/9/README.md) |
 | 10 | Content analysis pipeline | Rekognition, Comprehend, Transcribe | [→]() |
 | 11 | Multilingual processing | Translate, Comprehend, Lambda | [→]() |
 | 12 | Three-tier architecture | ALB, Auto Scaling, RDS Multi-AZ | [→]() |
