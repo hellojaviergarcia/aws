@@ -1,3 +1,4 @@
+# Terraform
 .terraform/
 terraform.tfstate
 terraform.tfstate.backup
@@ -5,13 +6,36 @@ terraform.tfstate.backup
 *.tfvars
 *.tfvars.json
 
+# AWS Lambda
 lambda/index.zip
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+
+# HTML / Node
+node_modules/
+dist/
+.cache/
+
+# Environment variables
 .env
 .env.local
 
+# OS files
 .DS_Store
 Thumbs.db
 
+# IDE
 .vscode/
 .idea/
