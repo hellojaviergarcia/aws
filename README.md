@@ -37,7 +37,6 @@ All projects follow the same principles:
 - **Infrastructure as Code** ; every resource is defined in Terraform and deployable with a single command
 - **Least privilege** ; IAM roles and policies grant only the permissions each service needs
 - **Replicable** ; no shared state, no hardcoded credentials, no manual prerequisites
-- **Free Tier friendly** ; designed to run at near-zero cost
 
 ---
 
