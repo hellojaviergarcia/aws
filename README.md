@@ -18,7 +18,7 @@
 | 04 | Observability setup | CloudWatch, SNS, Lambda | [→](./projects/4/README.md) |
 | 05 | S3 storage management | S3 Versioning, Lifecycle, Replication | [→](./projects/5/README.md) |
 | 06 | EC2 Auto Scaling | EC2, Launch Templates, ASG, CloudWatch | [→](./projects/6/README.md) |
-| 07 | Event-driven messaging | SNS, SQS, DLQ, Lambda | [→]() |
+| 07 | Event-driven messaging | SNS, SQS, DLQ, Lambda | [→](./projects/7/README.md) |
 | 08 | NoSQL database | DynamoDB, GSI, TTL, Streams | [→]() |
 | 09 | Generative AI chatbot | Bedrock, Lambda, S3, CloudFront | [→]() |
 | 10 | Content analysis pipeline | Rekognition, Comprehend, Transcribe | [→]() |
