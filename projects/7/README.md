@@ -32,16 +32,13 @@ Publisher → SNS Topic → SQS Queue → Lambda (processor)
 Publish a message to the SNS topic using the AWS CLI:
 
 ```bash
-aws sns publish \
-  --topic-arn <sns_topic_arn> \
-  --message '{"event": "order_created", "id": "123"}' \
-  --region us-east-1
+aws sns publish --topic-arn <sns_topic_arn> --message "Hello World!"
 ```
 
 Then check the Lambda logs in CloudWatch to confirm the message was processed:
 
-```
-CloudWatch → Log Groups → /aws/lambda/messaging-function
+```bash
+aws logs tail /aws/lambda/messaging-function --follow
 ```
 
 ---
