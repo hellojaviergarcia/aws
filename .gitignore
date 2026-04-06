@@ -1,0 +1,17 @@
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+
+lambda/index.zip
+
+.env
+.env.local
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/

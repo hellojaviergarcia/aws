@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS Static Website; S3 + CloudFront</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1a1f2e;
+      border: 1px solid #ff9900;
+      color: #ff9900;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h1 span { color: #ff9900; }
+
+    .subtitle {
+      color: #94a3b8;
+      text-align: center;
+      max-width: 500px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: #ff9900; }
+
+    .card-icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
+
+    .card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ff9900;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .cert {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: #cbd5e0;
+      margin-bottom: 2.5rem;
+    }
+
+    .infra-note {
+      font-size: 0.75rem;
+      color: #4a5568;
+      text-align: center;
+    }
+
+    .infra-note span { color: #ff9900; }
+  </style>
+</head>
+<body>
+
+  <div class="badge">☁️ AWS Cloud Practitioner</div>
+
+  <h1>Static Website on <span>AWS</span></h1>
+
+  <p class="subtitle">
+    Demonstration project showing how to host a static website on AWS
+    using S3 and CloudFront, deployed as Infrastructure as Code with Terraform.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🗂️</div>
+      <div class="card-title">Amazon S3</div>
+      <div class="card-desc">Stores the static files. Bucket is private — no direct public access.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌍</div>
+      <div class="card-title">CloudFront</div>
+      <div class="card-desc">Global CDN that serves the site over HTTPS from edge locations worldwide.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔐</div>
+      <div class="card-title">Origin Access Control</div>
+      <div class="card-desc">Only CloudFront can read the S3 bucket. Users never access S3 directly.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚙️</div>
+      <div class="card-title">Terraform</div>
+      <div class="card-desc">All infrastructure defined as code. Deploy everything with a single command.</div>
+    </div>
+  </div>
+
+  <div class="cert">☁️ AWS Certified Cloud Practitioner</div>
+
+  <p class="infra-note">
+    Deployed with <span>Terraform</span> · S3 + CloudFront · Infrastructure as Code
+  </p>
+
+</body>
+</html>
