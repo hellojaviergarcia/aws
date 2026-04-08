@@ -26,7 +26,7 @@
 | 12 | Three-tier architecture | ALB, Auto Scaling, RDS Multi-AZ | [→](./projects/12/README.md) |
 | 13 | Serverless production architecture | Lambda, API Gateway, DynamoDB, Cognito | [→](./projects/13/README.md) |
 | 14 | Disaster recovery | Route 53, RDS, S3 Cross-Region | [→](./projects/14/README.md) |
-| 15 | Data lake | S3, Glue, Athena, QuickSight | [→]() |
+| 15 | Data lake | S3, Glue, Athena, QuickSight | [→](./projects/15/README.md) |
 
 ---
 
