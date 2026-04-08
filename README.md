@@ -24,7 +24,7 @@
 | 10 | Content analysis pipeline | Rekognition, Comprehend, Transcribe | [→](./projects/10/README.md) |
 | 11 | Multilingual processing | Translate, Comprehend, Lambda | [→](./projects/11/README.md) |
 | 12 | Three-tier architecture | ALB, Auto Scaling, RDS Multi-AZ | [→](./projects/12/README.md) |
-| 13 | Serverless production architecture | Lambda, API Gateway, DynamoDB, Cognito | [→]() |
+| 13 | Serverless production architecture | Lambda, API Gateway, DynamoDB, Cognito | [→](./projects/13/README.md) |
 | 14 | Disaster recovery | Route 53, RDS, S3 Cross-Region | [→]() |
 | 15 | Data lake | S3, Glue, Athena, QuickSight | [→]() |
 
