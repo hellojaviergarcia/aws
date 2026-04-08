@@ -23,7 +23,7 @@
 | 09 | Generative AI chatbot | Bedrock, Lambda, S3, CloudFront | [→](./projects/9/README.md) |
 | 10 | Content analysis pipeline | Rekognition, Comprehend, Transcribe | [→](./projects/10/README.md) |
 | 11 | Multilingual processing | Translate, Comprehend, Lambda | [→](./projects/11/README.md) |
-| 12 | Three-tier architecture | ALB, Auto Scaling, RDS Multi-AZ | [→]() |
+| 12 | Three-tier architecture | ALB, Auto Scaling, RDS Multi-AZ | [→](./projects/12/README.md) |
 | 13 | Serverless production architecture | Lambda, API Gateway, DynamoDB, Cognito | [→]() |
 | 14 | Disaster recovery | Route 53, RDS, S3 Cross-Region | [→]() |
 | 15 | Data lake | S3, Glue, Athena, QuickSight | [→]() |
