@@ -1,5 +1,5 @@
 # ============================================================
-# S3 BUCKET — Stores the chatbot web interface
+# S3 BUCKET ; Stores the chatbot web interface
 # ============================================================
 
 resource "aws_s3_bucket" "website" {
@@ -34,7 +34,7 @@ resource "aws_s3_object" "index" {
 }
 
 # ============================================================
-# CLOUDFRONT — CDN for the chatbot web interface
+# CLOUDFRONT ; CDN for the chatbot web interface
 # ============================================================
 
 resource "aws_cloudfront_origin_access_control" "website" {
@@ -104,7 +104,7 @@ resource "aws_s3_bucket_policy" "website" {
 }
 
 # ============================================================
-# IAM — Permissions for Lambda to invoke Bedrock
+# IAM ; Permissions for Lambda to invoke Bedrock
 # ============================================================
 
 resource "aws_iam_role" "lambda_role" {
@@ -154,7 +154,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
 }
 
 # ============================================================
-# LAMBDA — Handles chat requests and invokes Bedrock
+# LAMBDA ; Handles chat requests and invokes Bedrock
 # ============================================================
 
 data "archive_file" "lambda_zip" {
@@ -201,7 +201,7 @@ resource "aws_cloudwatch_log_group" "lambda_logs" {
 }
 
 # ============================================================
-# API GATEWAY — Exposes the chatbot as an HTTP endpoint
+# API GATEWAY ; Exposes the chatbot as an HTTP endpoint
 # ============================================================
 
 resource "aws_apigatewayv2_api" "main" {

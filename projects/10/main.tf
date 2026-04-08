@@ -1,5 +1,5 @@
 # ============================================================
-# S3 BUCKET — Stores input files and analysis results
+# S3 BUCKET ; Stores input files and analysis results
 # ============================================================
 
 resource "random_id" "suffix" {
@@ -26,7 +26,7 @@ resource "aws_s3_bucket_public_access_block" "main" {
 }
 
 # ============================================================
-# IAM — Permissions for Lambda to use AI services
+# IAM ; Permissions for Lambda to use AI services
 # ============================================================
 
 resource "aws_iam_role" "lambda_role" {
@@ -113,7 +113,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
 }
 
 # ============================================================
-# LAMBDA — Orchestrates Rekognition, Comprehend and Transcribe
+# LAMBDA ; Orchestrates Rekognition, Comprehend and Transcribe
 # ============================================================
 
 data "archive_file" "lambda_zip" {
@@ -160,7 +160,7 @@ resource "aws_cloudwatch_log_group" "lambda_logs" {
 }
 
 # ============================================================
-# API GATEWAY — Exposes the analysis pipeline as HTTP endpoint
+# API GATEWAY ; Exposes the analysis pipeline as HTTP endpoint
 # ============================================================
 
 resource "aws_apigatewayv2_api" "main" {
@@ -199,21 +199,21 @@ resource "aws_apigatewayv2_integration" "main" {
   payload_format_version = "2.0"
 }
 
-# POST /analyze/image — analyze an image with Rekognition
+# POST /analyze/image ; analyze an image with Rekognition
 resource "aws_apigatewayv2_route" "analyze_image" {
   api_id    = aws_apigatewayv2_api.main.id
   route_key = "POST /analyze/image"
   target    = "integrations/${aws_apigatewayv2_integration.main.id}"
 }
 
-# POST /analyze/text — analyze text with Comprehend
+# POST /analyze/text ; analyze text with Comprehend
 resource "aws_apigatewayv2_route" "analyze_text" {
   api_id    = aws_apigatewayv2_api.main.id
   route_key = "POST /analyze/text"
   target    = "integrations/${aws_apigatewayv2_integration.main.id}"
 }
 
-# POST /analyze/audio — transcribe audio with Transcribe
+# POST /analyze/audio ; transcribe audio with Transcribe
 resource "aws_apigatewayv2_route" "analyze_audio" {
   api_id    = aws_apigatewayv2_api.main.id
   route_key = "POST /analyze/audio"

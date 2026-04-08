@@ -31,7 +31,7 @@ The following arguments are required:
 * `attachments_configuration` - (Required) Information about whether file upload functionality is activated or deactivated for your end user. See [`attachments_configuration`](#attachments_configuration) below.
 * `display_name` - (Required) Name of the Amazon Q application.
 * `iam_service_role_arn` - (Required) ARN of an IAM role with permissions to access your Amazon CloudWatch logs and metrics.
-* `identity_center_instance_arn` - (Required) ARN of the IAM Identity Center instance you are either creating for — or connecting to — your Amazon Q Business application.
+* `identity_center_instance_arn` - (Required) ARN of the IAM Identity Center instance you are either creating for ; or connecting to ; your Amazon Q Business application.
 
 The following arguments are optional:
 

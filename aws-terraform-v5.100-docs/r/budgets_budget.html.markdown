@@ -419,9 +419,9 @@ Valid keys for `planned_limit` parameter.
 
 ### Filter Expression
 
-The `filter_expression` block maps directly to the [AWS Expression](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Expression.html) object. Each expression block must have **exactly one root** — you can set one of `and`, `or`, `not`, `dimensions`, `tags`, or `cost_categories`, but not multiple at the same level.
+The `filter_expression` block maps directly to the [AWS Expression](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Expression.html) object. Each expression block must have **exactly one root** ; you can set one of `and`, `or`, `not`, `dimensions`, `tags`, or `cost_categories`, but not multiple at the same level.
 
-~> **Important:** `and` and `or` require **at least 2 operands**. Each operand is a separate `and` or `or` block within the parent. Do not place multiple leaf filters (e.g., `dimensions` and `tags`) inside a single `and`/`or` block — instead, use one block per leaf. The maximum expression nesting depth allowed by the AWS API is 2.
+~> **Important:** `and` and `or` require **at least 2 operands**. Each operand is a separate `and` or `or` block within the parent. Do not place multiple leaf filters (e.g., `dimensions` and `tags`) inside a single `and`/`or` block ; instead, use one block per leaf. The maximum expression nesting depth allowed by the AWS API is 2.
 
 * `and` - (Optional) A list of filter expressions to combine with AND logic. Each `and` block is one operand and must itself contain exactly one root.
 * `or` - (Optional) A list of filter expressions to combine with OR logic. Each `or` block is one operand and must itself contain exactly one root.

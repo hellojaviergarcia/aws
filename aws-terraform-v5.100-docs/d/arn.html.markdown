@@ -34,4 +34,4 @@ This data source exports the following attributes in addition to the arguments a
 Note that the ARNs for some resources do not include a Region, so this component might be omitted.
 * `account` - The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
 * `resource` - Content of this part of the ARN varies by service.
-It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
+It often includes an indicator of the type of resource;for example, an IAM user or Amazon RDS database ;followed by a slash (/) or a colon (:), followed by the resource name itself.

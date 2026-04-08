@@ -1,5 +1,5 @@
 # ============================================================
-# IAM — Permissions for Lambda to use Translate and Comprehend
+# IAM ; Permissions for Lambda to use Translate and Comprehend
 # ============================================================
 
 resource "aws_iam_role" "lambda_role" {
@@ -60,7 +60,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
 }
 
 # ============================================================
-# LAMBDA — Orchestrates Translate and Comprehend
+# LAMBDA ; Orchestrates Translate and Comprehend
 # ============================================================
 
 data "archive_file" "lambda_zip" {
@@ -106,7 +106,7 @@ resource "aws_cloudwatch_log_group" "lambda_logs" {
 }
 
 # ============================================================
-# API GATEWAY — Exposes the multilingual pipeline as HTTP
+# API GATEWAY ; Exposes the multilingual pipeline as HTTP
 # ============================================================
 
 resource "aws_apigatewayv2_api" "main" {
@@ -145,14 +145,14 @@ resource "aws_apigatewayv2_integration" "main" {
   payload_format_version = "2.0"
 }
 
-# POST /translate — detect language and translate to target
+# POST /translate ; detect language and translate to target
 resource "aws_apigatewayv2_route" "translate" {
   api_id    = aws_apigatewayv2_api.main.id
   route_key = "POST /translate"
   target    = "integrations/${aws_apigatewayv2_integration.main.id}"
 }
 
-# POST /analyze — detect language, translate and analyze sentiment
+# POST /analyze ; detect language, translate and analyze sentiment
 resource "aws_apigatewayv2_route" "analyze" {
   api_id    = aws_apigatewayv2_api.main.id
   route_key = "POST /analyze"

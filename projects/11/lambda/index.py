@@ -26,7 +26,7 @@ def handler(event, context):
     return response(404, {"error": "Route not found"})
 
 
-# ── Translate — Detect language and translate ────────────────
+# ── Translate ; Detect language and translate ────────────────
 
 def handle_translate(body):
     """
@@ -55,7 +55,7 @@ def handle_translate(body):
     })
 
 
-# ── Analyze — Translate + full Comprehend analysis ───────────
+# ── Analyze ; Translate + full Comprehend analysis ───────────
 
 def handle_analyze(body):
     """
@@ -67,11 +67,11 @@ def handle_analyze(body):
     if not text:
         return response(400, {"error": "Field 'text' is required"})
 
-    # Step 1 — Detect dominant language
+    # Step 1 ; Detect dominant language
     language_result = comprehend.detect_dominant_language(Text=text)
     source_language = language_result["Languages"][0]["LanguageCode"]
 
-    # Step 2 — Translate to English for consistent analysis
+    # Step 2 ; Translate to English for consistent analysis
     translated = translate.translate_text(
         Text               = text,
         SourceLanguageCode = source_language,
@@ -79,7 +79,7 @@ def handle_analyze(body):
     )
     translated_text = translated["TranslatedText"]
 
-    # Step 3 — Run Comprehend on the translated text
+    # Step 3 ; Run Comprehend on the translated text
     sentiment = comprehend.detect_sentiment(
         Text         = translated_text,
         LanguageCode = "en"

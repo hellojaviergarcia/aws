@@ -153,7 +153,7 @@ provider "aws" {
 
 ## Removed Provider Arguments
 
-Remove the following from your provider configuration—they are no longer supported:
+Remove the following from your provider configuration;they are no longer supported:
 
 - `endpoints.opsworks` – removed following AWS OpsWorks Stacks End of Life.
 - `endpoints.simpledb` and `endpoints.sdb` – removed due to the removal of Amazon SimpleDB support.
@@ -299,11 +299,11 @@ Update your configurations to replace any usage of `compute_environment_name` wi
 
 ## Data Source `aws_ecs_task_definition`
 
-Remove `inference_accelerator`—it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
+Remove `inference_accelerator`;it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
 
 ## Data Source `aws_ecs_task_execution`
 
-Remove `inference_accelerator_overrides`—it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
+Remove `inference_accelerator_overrides`;it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
 
 ## Data Source `aws_elbv2_listener_rule`
 
@@ -331,11 +331,11 @@ If your configuration explicitly attempts to set a value for `id`, you must remo
 
 ## Data Source `aws_identitystore_group`
 
-Remove `filter`—it is no longer supported. To locate a group, update your configuration to use `alternate_identifier` instead.
+Remove `filter`;it is no longer supported. To locate a group, update your configuration to use `alternate_identifier` instead.
 
 ## Data Source `aws_identitystore_user`
 
-Remove `filter`—it is no longer supported.
+Remove `filter`;it is no longer supported.
 To locate a user, update your configuration to use `alternate_identifier` instead.
 
 ## Data Source `aws_kms_secret`
@@ -344,14 +344,14 @@ The functionality for this data source was removed in **v2.0.0** and the data so
 
 ## Data Source `aws_launch_template`
 
-Remove the following—they are no longer supported:
+Remove the following;they are no longer supported:
 
 - `elastic_gpu_specifications`: Amazon Elastic Graphics reached end of life in January 2024.
 - `elastic_inference_accelerator`: Amazon Elastic Inference reached end of life in April 2024.
 
 ## Data Source `aws_opensearch_domain`
 
-Remove `kibana_endpoint`—it is no longer supported. AWS OpenSearch Service no longer uses Kibana endpoints. The service now uses **Dashboards**, accessible at the `/_dashboards/` path on the domain endpoint.
+Remove `kibana_endpoint`;it is no longer supported. AWS OpenSearch Service no longer uses Kibana endpoints. The service now uses **Dashboards**, accessible at the `/_dashboards/` path on the domain endpoint.
 For more details, refer to the [AWS OpenSearch Dashboards documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/dashboards.html).
 
 ## Data Source `aws_opensearchserverless_security_config`
@@ -360,7 +360,7 @@ Treat `saml_options` as a list of nested blocks instead of a single-nested block
 
 ## Data Source `aws_quicksight_data_set`
 
-Remove `tags_all`—it is no longer supported.
+Remove `tags_all`;it is no longer supported.
 
 ## Data Source `aws_region`
 
@@ -372,7 +372,7 @@ Remove `tags_all`—it is no longer supported.
 
 ## Data Source `aws_service_discovery_service`
 
-Remove `tags_all`—it is no longer supported.
+Remove `tags_all`;it is no longer supported.
 
 ## Data Source `aws_servicequotas_templates`
 
@@ -392,7 +392,7 @@ Remove `tags_all`—it is no longer supported.
 
 ## Resource `aws_api_gateway_account`
 
-Remove `reset_on_delete`—it is no longer supported. The destroy operation will now always reset the API Gateway account settings by default.
+Remove `reset_on_delete`;it is no longer supported. The destroy operation will now always reset the API Gateway account settings by default.
 
 If you want to retain the previous behavior (where the account settings were not changed upon destruction), use a `removed` block in your configuration. For more details, see the [removing resources documentation](https://developer.hashicorp.com/terraform/language/resources/syntax#removing-resources).
 
@@ -402,7 +402,7 @@ If you want to retain the previous behavior (where the account settings were not
     - `stage_name`
     - `stage_description`
     - `canary_settings`
-* Remove `invoke_url` and `execution_arn`—they are no longer supported. Use the `aws_api_gateway_stage` resource instead.
+* Remove `invoke_url` and `execution_arn`;they are no longer supported. Use the `aws_api_gateway_stage` resource instead.
 
 ### Migration Example
 
@@ -451,7 +451,7 @@ Replace any usage of `compute_environment_name` with `name` and `compute_environ
 
 ## Resource `aws_batch_job_queue`
 
-Remove `compute_environments`—it is no longer supported.
+Remove `compute_environments`;it is no longer supported.
 Use `compute_environment_order` configuration blocks instead. While you must update your configuration, Terraform will upgrade states with `compute_environments` to `compute_environment_order`.
 
 **Before (v5 and earlier):**
@@ -524,7 +524,7 @@ Do not use `character_set_name` with `replicate_source_db`, `restore_to_point_in
 
 ## Resource `aws_dx_gateway_association`
 
-Remove `vpn_gateway_id`—it is no longer supported. Use `associated_gateway_id` instead.
+Remove `vpn_gateway_id`;it is no longer supported. Use `associated_gateway_id` instead.
 
 ## Resource `aws_dx_hosted_connection`
 
@@ -532,15 +532,15 @@ Remove `vpn_gateway_id`—it is no longer supported. Use `associated_gateway_id`
 
 ## Resource `aws_ecs_task_definition`
 
-Remove `inference_accelerator`—it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
+Remove `inference_accelerator`;it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
 
 ## Resource `aws_eip`
 
-Remove `vpc`—it is no longer supported. Use `domain` instead.
+Remove `vpc`;it is no longer supported. Use `domain` instead.
 
 ## Resource `aws_eks_addon`
 
-Remove `resolve_conflicts`—it is no longer supported. Use `resolve_conflicts_on_create` and `resolve_conflicts_on_update` instead.
+Remove `resolve_conflicts`;it is no longer supported. Use `resolve_conflicts_on_create` and `resolve_conflicts_on_update` instead.
 
 ## Resource `aws_elasticache_replication_group`
 
@@ -560,7 +560,7 @@ In `v7.0.0`, plan-time validation of `engine` will require an entirely lowercase
 
 ## Resource `aws_flow_log`
 
-Remove `log_group_name`—it is no longer supported. Use `log_destination` instead.
+Remove `log_group_name`;it is no longer supported. Use `log_destination` instead.
 
 ## Resource `aws_guardduty_detector`
 
@@ -569,14 +569,14 @@ Use the `aws_guardduty_detector_feature` resource instead.
 
 ## Resource `aws_guardduty_organization_configuration`
 
-* Remove `auto_enable`—it is no longer supported.
+* Remove `auto_enable`;it is no longer supported.
 * `auto_enable_organization_members` is now required.
 * `datasources` is deprecated.
 
 ## Resource `aws_instance`
 
 * `user_data` no longer applies hashing and is now stored in clear text. **Do not include passwords or sensitive information** in `user_data`, as it will be visible in plaintext. Follow [AWS Best Practices](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) to secure your instance metadata. If you need to provide base64-encoded user data, use `user_data_base64` instead.
-* Remove `cpu_core_count` and `cpu_threads_per_core`—they are no longer supported. Instead, use the `cpu_options` configuration block with `core_count` and `threads_per_core`.
+* Remove `cpu_core_count` and `cpu_threads_per_core`;they are no longer supported. Instead, use the `cpu_options` configuration block with `core_count` and `threads_per_core`.
 
 ## Resource `aws_kinesis_analytics_application`
 
@@ -584,8 +584,8 @@ This resource is deprecated and will be removed in a future version. [Effective 
 
 ## Resource `aws_launch_template`
 
-* Remove `elastic_gpu_specifications`—it is no longer supported. Amazon Elastic Graphics reached end of life in January 2024.
-* Remove `elastic_inference_accelerator`—it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
+* Remove `elastic_gpu_specifications`;it is no longer supported. Amazon Elastic Graphics reached end of life in January 2024.
+* Remove `elastic_inference_accelerator`;it is no longer supported. Amazon Elastic Inference reached end of life in April 2024.
 * See also [changes](#typenullablebool-validation-update) to `block_device_mappings.ebs.delete_on_termination`, `block_device_mappings.ebs.encrypted`, `ebs_optimized`, `network_interfaces.associate_carrier_ip_address`, `network_interfaces.associate_public_ip_address`, `network_interfaces.delete_on_termination`, and `network_interfaces.primary_ipv6`.
 
 ## Resource `aws_lb_listener`
@@ -603,11 +603,11 @@ This resource is deprecated and will be removed in a future version. AWS has [an
 
 ## Resource `aws_networkmanager_core_network`
 
-Remove `base_policy_region`—it is no longer supported. Use `base_policy_regions` instead.
+Remove `base_policy_region`;it is no longer supported. Use `base_policy_regions` instead.
 
 ## Resource `aws_opensearch_domain`
 
-Remove `kibana_endpoint`—it is no longer supported. AWS OpenSearch Service does not use Kibana endpoints (i.e., `_plugin/kibana`). Instead, OpenSearch uses Dashboards, accessible at the path `/_dashboards/` on the domain endpoint. The terminology has shifted from “Kibana” to “Dashboards.”
+Remove `kibana_endpoint`;it is no longer supported. AWS OpenSearch Service does not use Kibana endpoints (i.e., `_plugin/kibana`). Instead, OpenSearch uses Dashboards, accessible at the path `/_dashboards/` on the domain endpoint. The terminology has shifted from “Kibana” to “Dashboards.”
 
 For more information, see the [AWS OpenSearch Dashboards documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/dashboards.html).
 
@@ -623,8 +623,8 @@ Treat the `key_attributes` and `key_attributes.key_modes_of_use` as lists of nes
 
 * `encrypted` now defaults to `true`.
 * `publicly_accessible` now defaults to `false`.
-* Remove `snapshot_copy`—it is no longer supported. Use the `aws_redshift_snapshot_copy` resource instead.
-* Remove `logging`—it is no longer supported. Use the `aws_redshift_logging` resource instead.
+* Remove `snapshot_copy`;it is no longer supported. Use the `aws_redshift_snapshot_copy` resource instead.
+* Remove `logging`;it is no longer supported. Use the `aws_redshift_logging` resource instead.
 * `cluster_public_key`, `cluster_revision_number`, and `endpoint` are now read only and should not be set.
 
 ## Resource `aws_redshift_service_account`
@@ -658,7 +658,7 @@ Use `image_name` to reference the image name.
 
 ## Resource `aws_sagemaker_notebook_instance`
 
-Remove `accelerator_types`—it is no longer supported. Instead, use `instance_type` to use [Inferentia](https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html).
+Remove `accelerator_types`;it is no longer supported. Instead, use `instance_type` to use [Inferentia](https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html).
 
 ## Resource `aws_servicequotas_template`
 
@@ -666,11 +666,11 @@ Remove `accelerator_types`—it is no longer supported. Instead, use `instance_t
 
 ## Resource `aws_spot_instance_request`
 
-Remove `block_duration_minutes`—it is no longer supported.
+Remove `block_duration_minutes`;it is no longer supported.
 
 ## Resource `aws_ssm_association`
 
-Remove `instance_id`—it is no longer supported. Use `targets` instead.
+Remove `instance_id`;it is no longer supported. Use `targets` instead.
 
 ## Resource `aws_ssmincidents_replication_set`
 

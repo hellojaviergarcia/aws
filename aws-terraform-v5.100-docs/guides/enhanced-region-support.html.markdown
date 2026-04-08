@@ -40,7 +40,7 @@ resource "aws_vpc" "peer" {
 
 _Pre-v6.0.0 configurations that use provider blocks per Region remain valid in v6.0.0 and are not deprecated._
 
-You can still define the Region at the provider level using any of the existing methods—for example, through the AWS [config file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), [provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration), [environment variables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables), [shared configuration files](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#shared-configuration-and-credentials-files), or explicitly using the `provider`’s [`region`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#region).
+You can still define the Region at the provider level using any of the existing methods;for example, through the AWS [config file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), [provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration), [environment variables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables), [shared configuration files](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#shared-configuration-and-credentials-files), or explicitly using the `provider`’s [`region`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#region).
 
 ## Can I use `region` in every resource?
 
@@ -48,7 +48,7 @@ No. While most resources are now Region-aware, there are exceptions. These inclu
 
 ## Why make this change
 
-Before version 6.0.0, managing infrastructure across multiple Regions required a separate provider configuration for each Region. This approach led to complex and repetitive configurations, especially for large infrastructures—AWS currently operates in [36 Regions](https://aws.amazon.com/about-aws/global-infrastructure/), with more announced. Additionally, each provider configuration adds overhead in terms of memory and compute resources.
+Before version 6.0.0, managing infrastructure across multiple Regions required a separate provider configuration for each Region. This approach led to complex and repetitive configurations, especially for large infrastructures;AWS currently operates in [36 Regions](https://aws.amazon.com/about-aws/global-infrastructure/), with more announced. Additionally, each provider configuration adds overhead in terms of memory and compute resources.
 
 See the [examples](#before-and-after-examples-using-region) below for a comparison of configurations before and after introducing `region`.
 
@@ -60,7 +60,7 @@ The new top-level `region` argument is [_Optional_ and _Computed_](https://devel
 
 **Removing `region` does not force resource replacement. The prior value of `region` stored in Terraform state will be used.**
 
-To [import](https://developer.hashicorp.com/terraform/cli/import) a resource in a specific Region, append `@<region>` to the [import ID](https://developer.hashicorp.com/terraform/language/import#import-id)—for example:
+To [import](https://developer.hashicorp.com/terraform/cli/import) a resource in a specific Region, append `@<region>` to the [import ID](https://developer.hashicorp.com/terraform/language/import#import-id);for example:
 
 ```sh
 terraform import aws_vpc.test_vpc vpc-a01106c2@eu-west-1

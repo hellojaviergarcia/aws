@@ -31,7 +31,7 @@ def handler(event, context):
     return response(404, {"error": "Route not found"})
 
 
-# ── Rekognition — Image analysis ────────────────────────────
+# ── Rekognition ; Image analysis ────────────────────────────
 
 def analyze_image(body):
     """
@@ -71,7 +71,7 @@ def analyze_image(body):
     return response(200, result)
 
 
-# ── Comprehend — Text analysis ───────────────────────────────
+# ── Comprehend ; Text analysis ───────────────────────────────
 
 def analyze_text(body):
     """
@@ -108,7 +108,7 @@ def analyze_text(body):
     return response(200, result)
 
 
-# ── Transcribe — Audio transcription ─────────────────────────
+# ── Transcribe ; Audio transcription ─────────────────────────
 
 def analyze_audio(body):
     """

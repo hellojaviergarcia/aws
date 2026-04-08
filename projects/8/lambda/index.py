@@ -38,7 +38,7 @@ def handler(event, context):
         "category":   category,
         "name":       "Demo item",
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "expires_at": expires  # TTL field — DynamoDB deletes this item automatically
+        "expires_at": expires  # TTL field ; DynamoDB deletes this item automatically
     }
 
     table.put_item(Item=item)

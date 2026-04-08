@@ -127,7 +127,7 @@ This data source exports the following attributes in addition to the arguments a
 * `vip_ids` - The virtual IP (VIP) addresses assigned to the VM cluster. CRS assigns one VIP per node for failover support.
 * `created_at` - The timestamp when the VM cluster was created.
 * `gi_version_computed` - A complete software version of Oracle Grid Infrastructure (GI).
-* `compute_model` - The compute model used when the instance is created or cloned — either ECPU or OCPU. ECPU is a virtualized compute unit; OCPU is a physical processor core with hyper-threading.
+* `compute_model` - The compute model used when the instance is created or cloned ; either ECPU or OCPU. ECPU is a virtualized compute unit; OCPU is a physical processor core with hyper-threading.
 * `tags_all` - The combined set of user-defined and provider-defined tags.
 
 ## Timeouts

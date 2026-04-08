@@ -16,7 +16,7 @@ Terraform resource for managing an AWS Timestream Query Scheduled Query.
 
 Before creating a scheduled query, you must have a source database and table with ingested data. Below is a [multi-step example](#multi-step-example), providing an opportunity for data ingestion.
 
-If your infrastructure is already set up—including the source database and table with data, results database and table, error report S3 bucket, SNS topic, and IAM role—you can create a scheduled query as follows:
+If your infrastructure is already set up;including the source database and table with data, results database and table, error report S3 bucket, SNS topic, and IAM role;you can create a scheduled query as follows:
 
 ```terraform
 resource "aws_timestreamquery_scheduled_query" "example" {
